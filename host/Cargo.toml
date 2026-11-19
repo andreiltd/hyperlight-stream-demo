@@ -1,0 +1,21 @@
+[package]
+name = "hl-http"
+description = "Stream an HTTP body through a Hyperlight guest that anonymizes it"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+anyhow = "1"
+bytes = "1"
+hl-http-common = { path = "../common" }
+http-body-util = "0.1"
+hyper = { version = "1", features = ["client", "http1"] }
+hyper-util = { version = "0.1", features = ["tokio"] }
+hyperlight-host = { git = "https://github.com/andreiltd/hyperlight", branch = "streams" }
+tokio = { version = "1", features = ["macros", "net", "rt-multi-thread"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["io-util", "time"] }

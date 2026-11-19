@@ -1,0 +1,14 @@
+[package]
+name = "hl-http-guest"
+description = "A Hyperlight guest that anonymizes an HTTP body as it streams through"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+# `cargo hyperlight build` builds the guest apart from the host workspace.
+[workspace]
+
+[dependencies]
+hl-http-common = { path = "../common" }
+hyperlight-guest = { git = "https://github.com/andreiltd/hyperlight", branch = "streams" }
+hyperlight-guest-bin = { git = "https://github.com/andreiltd/hyperlight", branch = "streams", default-features = false, features = ["macros"] }

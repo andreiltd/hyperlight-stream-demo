@@ -1,0 +1,10 @@
+[workspace]
+resolver = "3"
+members = ["common", "host"]
+# The guest builds for the Hyperlight target with its own toolchain.
+exclude = ["guest"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+publish = false

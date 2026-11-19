@@ -1,0 +1,4 @@
+# Matches the Hyperlight checkout that the host builds against.
+[toolchain]
+channel = "1.99.1"
+components = ["clippy"]

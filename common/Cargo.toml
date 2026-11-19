@@ -1,0 +1,10 @@
+[package]
+name = "hl-http-common"
+description = "Types and logic shared by the hl-http host and guest"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+bytes = { version = "1", default-features = false }
+hyperlight-common = { git = "https://github.com/andreiltd/hyperlight", branch = "streams", default-features = false }
